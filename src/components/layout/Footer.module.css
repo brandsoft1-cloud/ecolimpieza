@@ -1,0 +1,120 @@
+.footer {
+    background-color: #1a1a1a;
+    color: var(--white);
+    padding: 5rem 0 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    }
+}
+
+.brand .logo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.logoText {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--secondary);
+}
+
+.logoSubtext {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 2px;
+}
+
+.description {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    max-width: 300px;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.socials a {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.socials a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.links h3,
+.contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.links h3::after,
+.contact h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--secondary);
+}
+
+.links ul,
+.contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.links a {
+    color: #aaa;
+    transition: var(--transition);
+}
+
+.links a:hover {
+    color: var(--secondary);
+    padding-left: 5px;
+}
+
+.contact li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #aaa;
+}
+
+.icon {
+    color: var(--secondary);
+}
+
+.bottom {
+    border-top: 1px solid #333;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,163 @@
+.page {
+    background: var(--white);
+}
+
+.hero {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.heroImg {
+    object-fit: cover;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.heroContent h1 {
+    font-size: 4rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.heroContent p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary);
+}
+
+/* About Section */
+.aboutSection {
+    padding: 8rem 0;
+}
+
+.aboutGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .aboutGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.badge {
+    color: var(--primary);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.aboutText h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.aboutText p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+    opacity: 0.9;
+}
+
+.imgRounded {
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-premium);
+    width: 100%;
+    height: auto;
+}
+
+/* Mission / Vision Cards */
+.missionVision {
+    padding: 6rem 0;
+    background: var(--light);
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 3.5rem 2.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-premium);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.cardIcon {
+    color: var(--primary);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+.card p {
+    color: var(--dark);
+    opacity: 0.8;
+    line-height: 1.8;
+}
+
+/* Attributes */
+.attributes {
+    padding: 8rem 0;
+}
+
+.attrGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    text-align: center;
+}
+
+.attrIcon {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.attrItem h4 {
+    margin-bottom: 1rem;
+}
+
+.attrItem p {
+    font-size: 0.9rem;
+    color: var(--dark);
+    opacity: 0.7;
+}

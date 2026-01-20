@@ -1,0 +1,134 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2500;
+    padding: 1rem;
+}
+
+.modal {
+    background: var(--white);
+    width: 100%;
+    max-width: 1000px;
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+    max-height: 90vh;
+    display: flex;
+}
+
+.close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--white);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.5rem;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1.2fr;
+    }
+}
+
+.imageBox {
+    position: relative;
+    height: 300px;
+}
+
+@media (min-width: 768px) {
+    .imageBox {
+        height: auto;
+    }
+}
+
+.image {
+    object-fit: cover;
+}
+
+.content {
+    padding: 3rem;
+    overflow-y: auto;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.cat {
+    color: var(--primary);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.header h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.section h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.section p {
+    color: var(--text-muted);
+}
+
+.list {
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+}
+
+.list li {
+    margin-bottom: 0.5rem;
+}
+
+.footer {
+    margin-top: 1rem;
+}
