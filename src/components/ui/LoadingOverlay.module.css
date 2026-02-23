@@ -1,0 +1,150 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  color: var(--dark);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.vactorSvg {
+  width: min(280px, 70vw);
+  height: auto;
+  color: var(--primary);
+  filter: drop-shadow(0 4px 20px rgba(119, 184, 85, 0.2));
+}
+
+/* Wheel rotation */
+.wheel {
+  transform-origin: center;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hose pulse */
+.hose {
+  stroke-dasharray: 20 10;
+  animation: hoseFlow 0.8s linear infinite;
+}
+
+@keyframes hoseFlow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 30;
+  }
+}
+
+/* Worker subtle bounce */
+.worker,
+.worker2 {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.worker {
+  animation: workerBounce 1.5s ease-in-out infinite;
+}
+
+.worker2 {
+  animation: workerBounce 1.5s ease-in-out infinite 0.3s;
+}
+
+@keyframes workerBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Tank subtle scale */
+.tank {
+  transform-box: fill-box;
+  transform-origin: center center;
+  animation: tankPulse 2s ease-in-out infinite;
+}
+
+@keyframes tankPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Truck cab slight movement */
+.truckCab {
+  transform-box: fill-box;
+  transform-origin: center center;
+  animation: truckIdle 2.5s ease-in-out infinite;
+}
+
+@keyframes truckIdle {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.barWrap {
+  width: 120px;
+  height: 4px;
+  background: rgba(119, 184, 85, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 4px;
+  animation: barSlide 1.2s ease-in-out infinite;
+}
+
+@keyframes barSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}
