@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloating from "@/components/ui/WhatsAppFloating";
+import WelcomeModal from "@/components/ui/WelcomeModal";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import "./globals.css";
 
@@ -51,6 +52,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <WhatsAppFloating />
+        <WelcomeModal />
 
         {/* LocalBusiness Structured Data */}
         <script
@@ -64,6 +66,7 @@ export default function RootLayout({
               "@id": "https://ecolimpiezabogota.com.co",
               "url": "https://ecolimpiezabogota.com.co",
               "telephone": "+573000000000",
+              "email": "gerencia@ecolimpiezabogota.com.co",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Calle Principal #123",

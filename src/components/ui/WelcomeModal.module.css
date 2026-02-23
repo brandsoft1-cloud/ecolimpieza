@@ -1,0 +1,297 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--dark);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 1;
+}
+
+.closeBtn:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Marca */
+.brandBlock {
+  background: linear-gradient(160deg, rgba(119, 184, 85, 0.95) 0%, rgba(90, 154, 61, 0.9) 100%);
+  color: var(--white);
+  padding: 1.25rem 1.25rem 1rem;
+  text-align: center;
+}
+
+.brandName {
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+
+.brandLegal {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.95;
+}
+
+.brandCity {
+  display: block;
+  font-size: 0.95em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.95;
+  margin-top: 0.1rem;
+}
+
+.brandIntro {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.95;
+  line-height: 1.4;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectors {
+  margin: 0;
+  padding: 0.6rem 1rem 0;
+  font-size: 0.8rem;
+  color: var(--dark);
+  opacity: 0.8;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Paneles SÍ / NO */
+.splitRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 1rem 1rem 0;
+}
+
+.panelYes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.85rem 0.5rem;
+  background: rgba(119, 184, 85, 0.08);
+  border-radius: 12px;
+  margin: 0 0.2rem 0 0;
+}
+
+.panelNo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.85rem 0.5rem;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  margin: 0 0 0 0.2rem;
+}
+
+.iconCircleYes {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(119, 184, 85, 0.2);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+
+.iconCircleNo {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+
+.iconCross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #999;
+  line-height: 1;
+}
+
+.iconCircleNo svg {
+  opacity: 0.5;
+}
+
+.panelBadgeYes,
+.panelBadgeNo {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.panelBadgeYes {
+  color: var(--primary);
+}
+
+.panelBadgeNo {
+  color: #666;
+}
+
+.panelTextYes {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-top: 0.15rem;
+  text-align: center;
+  line-height: 1.25;
+  opacity: 0.85;
+}
+
+.panelTextNo {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #666;
+  margin-top: 0.15rem;
+  text-align: center;
+  line-height: 1.25;
+}
+
+/* Aclaración otra empresa */
+.oneLine {
+  padding: 0.85rem 1rem 0;
+  margin: 0;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--dark);
+  line-height: 1.5;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.oneLine strong {
+  color: #555;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  padding: 1rem 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ctaBig {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--primary);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s;
+}
+
+.ctaBig:hover {
+  opacity: 0.92;
+  background: #6aa84a;
+}
+
+.ctaLink {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.ctaLink:hover {
+  text-decoration: underline;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #666;
+  cursor: pointer;
+  margin-top: 0.25rem;
+}
+
+.checkbox input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .modal {
+    max-width: 100%;
+  }
+  .brandBlock {
+    padding: 1rem 1rem;
+  }
+  .splitRow {
+    padding: 0.85rem 0.75rem 0;
+    gap: 0.4rem;
+    margin: 0;
+  }
+  .panelYes,
+  .panelNo {
+    margin: 0;
+  }
+  .iconCircleYes,
+  .iconCircleNo {
+    width: 56px;
+    height: 56px;
+  }
+  .iconCross {
+    font-size: 1.6rem;
+  }
+}
