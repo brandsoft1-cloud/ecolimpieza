@@ -16,7 +16,7 @@ export const projects: ProjectImage[] = [
         title: 'Limpieza de Alcantarillado Municipal',
         category: 'vactor',
         description: 'Succión mecánica de lodos y limpieza de tuberías de gran diámetro con equipo Vactor.',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070',
+        image: '/images/vactor-truck.jpg',
         client: 'Alcaldía Local',
         location: 'Bogotá, Suba'
     },
@@ -25,7 +25,7 @@ export const projects: ProjectImage[] = [
         title: 'Desobstrucción de Redes Industriales',
         category: 'hidrojet',
         description: 'Uso de hidrojet a alta presión para remover incrustaciones de grasa en planta de alimentos.',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070',
+        image: '/images/vactor-blue.jpg',
         client: 'Planta Alquería',
         location: 'Cajicá'
     },
@@ -34,7 +34,7 @@ export const projects: ProjectImage[] = [
         title: 'Inspección Robótica de Tubería',
         category: 'cctv',
         description: 'Diagnóstico por cámara CCTV para identificar fisuras en red contra incendios.',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070',
+        image: '/images/vactor-street.jpg',
         client: 'Centro Comercial Andino',
         location: 'Bogotá, Chapinero'
     },
@@ -43,7 +43,7 @@ export const projects: ProjectImage[] = [
         title: 'Mantenimiento de Trampas de Grasa',
         category: 'mantenimiento',
         description: 'Limpieza integral y disposición certificada de residuos orgánicos.',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070',
+        image: '/images/vactor-urban.jpg',
         client: 'Cadena de Restaurantes',
         location: 'Bogotá, Zona G'
     },
@@ -52,7 +52,7 @@ export const projects: ProjectImage[] = [
         title: 'Limpieza de Pozos Sépticos',
         category: 'vactor',
         description: 'Succión y transporte de lodos residuales en zona rural.',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070',
+        image: '/images/vactor-operation.jpg',
         client: 'Condominio Campestre',
         location: 'Villeta'
     },
@@ -61,7 +61,7 @@ export const projects: ProjectImage[] = [
         title: 'Corrección de Pendientes en Drenajes',
         category: 'mantenimiento',
         description: 'Ajuste de niveles y limpieza profunda de canales de recolección pluvial.',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070',
+        image: '/images/vactor-team.jpg',
         client: 'Parque Industrial',
         location: 'Funza'
     }

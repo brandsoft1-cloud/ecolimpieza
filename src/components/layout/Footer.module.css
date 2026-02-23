@@ -102,13 +102,38 @@
 
 .contact li {
     display: flex;
-    align-items: center;
-    gap: 0.8rem;
+    align-items: flex-start;
+    gap: 1rem;
     color: #aaa;
+}
+
+.contact li a,
+.contact li span {
+    color: #aaa;
+    text-decoration: none;
+    line-height: 1.5;
+    word-break: break-word;
+    transition: var(--transition);
+    flex: 1;
+}
+
+.contact li a:hover {
+    color: var(--secondary);
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .icon {
     color: var(--secondary);
+    flex-shrink: 0;
 }
 
 .bottom {

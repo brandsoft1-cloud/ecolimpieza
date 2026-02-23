@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Descubre los criterios clave para contratar una empresa de limpieza técnica que cumpla con normativas ambientales y eficiencia operativa.',
     date: '2024-01-15',
     category: 'Guía',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070',
+    image: '/images/vactor-blue.jpg',
     content: `
       <h2>Introducción a la Limpieza Técnica Industrial</h2>
       <p>En el corazón económico de Colombia, las industrias en Bogotá enfrentan retos constantes de mantenimiento. No se trata solo de estética; la operatividad de una planta depende de la limpieza crítica de sus sistemas.</p>
@@ -40,7 +40,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Evita inundaciones y problemas de salubridad en tu empresa con un programa de mantenimiento preventivo de redes hidrosanitarias.',
     date: '2024-01-10',
     category: 'Mantenimiento',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070',
+    image: '/images/vactor-urban.jpg',
     content: `
       <h2>¿Por qué el mantenimiento preventivo es una inversión?</h2>
       <p>Las redes sanitarias son las venas de cualquier edificio comercial. Su falla no solo genera malos olores, sino posibles multas y cierres temporales.</p>
@@ -55,7 +55,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Conozca cómo funcionan los camiones Vactor y por qué son la solución más eficiente para la limpieza de pozos y trampas de grasa.',
     date: '2024-02-05',
     category: 'Tecnología',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=2070',
+    image: '/images/vactor-operation.jpg',
     content: `
       <h2>La potencia de la succión por vacío</h2>
       <p>Los equipos Vactor combinan la succión por alto vacío con el lavado a presión. Esto permite remover sedimentos pesados y obstrucciones calcificadas que otros métodos no pueden tocar.</p>
@@ -76,7 +76,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Normatividad vigente y procedimientos seguros para la recolección y transporte de residuos industriales.',
     date: '2024-02-12',
     category: 'Legal',
-    image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=2070',
+    image: '/images/vactor-street.jpg',
     content: `
       <h2>Cumplimiento con la Secretaría de Ambiente</h2>
       <p>En Bogotá, el vertido ilegal de residuos puede acarrear sanciones millonarias. Es vital contar con un aliado que provea manifiestos de disposición legal.</p>
@@ -91,7 +91,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Guía rápida de acción ante desbordamientos y fallas críticas en sistemas de alcantarillado.',
     date: '2024-02-20',
     category: 'Emergencias',
-    image: 'https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&q=80&w=2070',
+    image: '/images/vactor-team.jpg',
     content: `
       <h2>Primeros pasos ante una emergencia</h2>
       <p>Lo primero es la seguridad. Desconecte fuentes eléctricas cercanas al área afectada y evite el contacto directo con aguas negras.</p>

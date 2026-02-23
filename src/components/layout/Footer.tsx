@@ -46,16 +46,22 @@ export default function Footer() {
                     <h3>Urgencias 24/7</h3>
                     <ul>
                         <li>
-                            <Phone size={18} className={styles.icon} />
+                            <div className={styles.iconWrapper}>
+                                <Phone size={20} className={styles.icon} />
+                            </div>
                             <a href="tel:+573000000000">+57 300 000 0000</a>
                         </li>
                         <li>
-                            <Mail size={18} className={styles.icon} />
+                            <div className={styles.iconWrapper}>
+                                <Mail size={20} className={styles.icon} />
+                            </div>
                             <a href="mailto:gerencia@ecolimpiezabogota.com.co">gerencia@ecolimpiezabogota.com.co</a>
                         </li>
                         <li>
-                            <MapPin size={18} className={styles.icon} />
-                            <span>Sede Bogotá, Colombia</span>
+                            <div className={styles.iconWrapper}>
+                                <MapPin size={20} className={styles.icon} />
+                            </div>
+                            <span>Bogotá, Colombia</span>
                         </li>
                     </ul>
                 </div>
