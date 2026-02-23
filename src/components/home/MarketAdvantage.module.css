@@ -1,0 +1,328 @@
+.section {
+  padding: 4.5rem 0;
+  background: var(--light);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--secondary);
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--dark);
+  opacity: 0.85;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Métricas con anillos */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 900px) {
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .metricsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.metricCard {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-premium);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.metricCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 48px rgba(0, 0, 0, 0.1);
+}
+
+.ringWrap {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem;
+}
+
+.ringSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.ringBg {
+  fill: none;
+  stroke: rgba(119, 184, 85, 0.15);
+  stroke-width: 8;
+}
+
+.ringFill {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 0 276;
+  transition: stroke var(--transition);
+}
+
+.metricCard:nth-child(1) .ringFill { stroke: var(--primary); }
+.metricCard:nth-child(2) .ringFill { stroke: var(--secondary); }
+.metricCard:nth-child(3) .ringFill { stroke: var(--primary); }
+.metricCard:nth-child(4) .ringFill { stroke: var(--secondary); }
+
+.ringInner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ringIcon {
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+.metricCard:nth-child(2) .ringIcon,
+.metricCard:nth-child(4) .ringIcon { color: var(--secondary); }
+
+.metricValue {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 0.25rem;
+}
+
+.metricLabel {
+  font-size: 0.85rem;
+  color: var(--dark);
+  opacity: 0.75;
+}
+
+/* Comparativa barras */
+.comparisonBlock {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-premium);
+  margin-bottom: 2rem;
+}
+
+.comparisonTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.comparisonDesc {
+  font-size: 0.9rem;
+  color: var(--dark);
+  opacity: 0.7;
+  margin-bottom: 0.75rem;
+}
+
+.barLegend {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.legendUs {
+  color: var(--primary);
+}
+
+.legendMarket {
+  color: var(--dark);
+  opacity: 0.5;
+}
+
+.barsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (max-width: 680px) {
+  .barRow {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+.barLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.barsGroup {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+@media (max-width: 680px) {
+  .barsGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.barUs,
+.barMarket {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.barUs {
+  position: relative;
+  height: 28px;
+  background: rgba(119, 184, 85, 0.12);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.barMarket {
+  position: relative;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.barUsFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--primary);
+  border-radius: var(--radius-sm);
+  min-width: 4px;
+}
+
+.barMarketFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-sm);
+  min-width: 4px;
+}
+
+/* Indicadores contextuales */
+.contextStrip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.contextItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.contextItem svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+/* CTA */
+.ctaWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 1.75rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.ctaPrimary:hover {
+  background: #669e4a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(119, 184, 85, 0.35);
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 1.75rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: transparent;
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.ctaSecondary:hover {
+  background: var(--secondary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
