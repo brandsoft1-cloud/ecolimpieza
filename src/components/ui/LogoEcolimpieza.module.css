@@ -1,0 +1,123 @@
+.wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.iconImg {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  display: block;
+}
+
+/* Si el PNG ya trae recuadro blanco, el fondo del box se funde */
+.wrap .iconBox .iconImg {
+  border-radius: 6px;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.mainText {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+}
+
+.subText {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--primary);
+}
+
+/* Solo ícono */
+.iconOnly .iconBox {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+/* Navbar: compacto */
+.full .iconBox {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.full .mainText {
+  font-size: 1.2rem;
+}
+
+.full .subText {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+}
+
+/* Loading / modal: más grande */
+.loading .iconBox {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+}
+
+.loading .mainText {
+  font-size: 1.6rem;
+}
+
+.loading .subText {
+  font-size: 0.9rem;
+  letter-spacing: 0.22em;
+}
+
+.modal .iconBox {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.modal .mainText {
+  font-size: 1.5rem;
+}
+
+.modal .subText {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+}
+
+/* Footer: fondo oscuro, texto claro */
+.footer .mainText,
+.footer .subText {
+  color: var(--white);
+}
+
+.footer .subText {
+  opacity: 0.9;
+}
+
+/* Modal: fondo verde, texto blanco */
+.modal .mainText,
+.modal .subText {
+  color: var(--white);
+}
+
+.modal .subText {
+  opacity: 0.95;
+}

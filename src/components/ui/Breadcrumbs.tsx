@@ -10,6 +10,9 @@ export default function Breadcrumbs() {
     const pathSegments = pathname.split("/").filter((segment) => segment !== "");
 
     if (pathname === "/") return null;
+    if (pathname === "/nosotros") return null;
+    if (pathname === "/galeria") return null;
+    if (pathname === "/blog" || pathname.startsWith("/blog/")) return null;
 
     return (
         <nav aria-label="Breadcrumb" className={styles.nav}>

@@ -9,24 +9,24 @@ import styles from "./CoreServices.module.css";
 const services = [
     {
         title: "Equipos Vactor",
-        desc: "Limpieza de redes de alcantarillado.",
+        desc: "Limpieza profunda de redes de alcantarillado con tecnología de succión-presión de alto rendimiento.",
         action: "Cotiza aquí",
         link: "https://api.whatsapp.com/send?phone=573183084334",
-        img: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=800&auto=format&fit=crop"
+        img: "/images/camion-vaccon-eco-limpieza-bogota.png"
     },
     {
         title: "Camión de Vacio",
-        desc: "Succión de trampas de grasas – pozos sépticos – PTAR – pozos eyectores en colegios empresas e industria.",
+        desc: "Succión especializada de trampas de grasas, pozos sépticos y PTAR para industrias e instituciones.",
         action: "Contáctenos",
         link: "/contactenos",
-        img: "https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=800&auto=format&fit=crop"
+        img: "/images/camion-vactor-servicios-eco-limpieza.png"
     },
     {
-        title: "Camara de Inspección",
-        desc: "Micro cámara portátil conectada a varios metros de manguera que permite revisar y analizar internamente las tuberías.",
+        title: "Cámara de Inspección",
+        desc: "Análisis interno de tuberías mediante tecnología de micro cámara portátil para diagnósticos precisos.",
         action: "Contáctenos",
         link: "/contactenos",
-        img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop"
+        img: "/images/tecnico-limpieza-alcantarillado-manhole.png"
     }
 ];
 
@@ -43,14 +43,25 @@ const fadeInUp: any = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6, ease: "easeOut" }
+        transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
     }
 };
 
 export default function CoreServices() {
     return (
-        <section className={styles.coreServices}>
+        <section id="servicios" className={styles.coreServices}>
             <div className="container">
+                <motion.div
+                    className={styles.header}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.8 }}
+                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                >
+                    <h2 className={styles.title}>Servicios Principales</h2>
+                    <p className={styles.subtitle}>Soluciones integrales con equipos de vanguardia para la industria.</p>
+                </motion.div>
+
                 <motion.div
                     className={styles.grid}
                     variants={stagger}
@@ -68,7 +79,8 @@ export default function CoreServices() {
                                 <h3>{srv.title}</h3>
                                 <p>{srv.desc}</p>
                                 <Link href={srv.link} className={styles.linkAction}>
-                                    {srv.action} <ArrowRight size={16} />
+                                    <span>{srv.action}</span>
+                                    <ArrowRight size={18} strokeWidth={1.5} />
                                 </Link>
                             </div>
                         </motion.div>

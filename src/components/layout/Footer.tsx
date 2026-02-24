@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin, Instagram, Facebook, Youtube } from "lucide-react";
+import LogoEcolimpieza from "../ui/LogoEcolimpieza";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -7,18 +8,15 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={`container ${styles.grid}`}>
                 <div className={styles.brand}>
-                    <div className={styles.logo}>
-                        <span className={styles.logoText}>ECOLIMPIEZA</span>
-                        <span className={styles.logoSubtext}>BOGOTÁ S.A.S</span>
-                    </div>
+                    <LogoEcolimpieza variant="footer" showSAS className={styles.logo} />
                     <p className={styles.description}>
                         Empresa líder en ingeniería de redes hidrosanitarias y succión Vactor.
                         Tecnología de punta y certificación ambiental para el sector industrial y residencial.
                     </p>
                     <div className={styles.socials}>
-                        <a href="https://facebook.com/ecolimpiezabogota" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={20} /></a>
-                        <a href="https://instagram.com/ecolimpiezabogota" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
-                        <a href="https://www.youtube.com/channel/UCs1cTCB4gmMfrzqEVbPtqFA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><Youtube size={20} /></a>
+                        <a href="https://www.facebook.com/p/ECOLIMPIEZA-BOGOTA-100026496225439/?locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={20} /></a>
+                        <a href="https://www.instagram.com/ecolimpiezabogota/?hl=es-la" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
+                        <a href="https://www.youtube.com/@vactorecolimpiezabogota3729" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><Youtube size={20} /></a>
                     </div>
                 </div>
 

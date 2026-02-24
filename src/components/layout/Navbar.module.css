@@ -27,56 +27,15 @@
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.7rem;
     text-decoration: none;
-    color: var(--white);
+    color: inherit;
 }
 
-.scrolled .logo {
-    color: var(--dark);
-}
-
-.iconBox {
-    background: var(--white);
-    color: var(--secondary);
-    padding: 0.5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.scrolled .iconBox {
-    background: var(--primary);
-    color: var(--white);
-}
-
-.drop {
-    width: 28px;
-    height: 28px;
-}
-
-.logoText {
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
-}
-
-.mainLogo {
-    font-size: 1.4rem;
-    font-weight: 900;
-    letter-spacing: -0.5px;
-}
-
-.subLogo {
-    font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 2.5px;
+.logoBrand {
     color: var(--primary);
 }
 
-.scrolled .subLogo {
+.scrolled .logo .logoBrand {
     color: var(--primary);
 }
 
@@ -98,10 +57,10 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--white);
+    color: #e8e8e8;
     text-decoration: none;
     transition: var(--transition);
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .scrolled .link {

@@ -25,7 +25,7 @@ export default function ContactForm() {
                     <CheckCircle size={80} color="var(--primary)" />
                 </motion.div>
                 <h2>Protocolo de Contacto Iniciado</h2>
-                <p>Un director técnico senior revisará su solicitud comercial en las próximas 2 horas.</p>
+                <p>Un director técnico senior revisará su solicitud comercial en un máximo de 30 minutos.</p>
                 <button onClick={() => setStatus("idle")} className="btn btn-outline">Solicitud Adicional</button>
             </div>
         );

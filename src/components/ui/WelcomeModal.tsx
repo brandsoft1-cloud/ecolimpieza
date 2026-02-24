@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Truck, UserCircle } from "lucide-react";
 import Link from "next/link";
+import LogoEcolimpieza from "./LogoEcolimpieza";
 import styles from "./WelcomeModal.module.css";
 
 const STORAGE_KEY = "ecolimpieza-bogota-welcome-v5";
@@ -59,9 +60,9 @@ export default function WelcomeModal() {
             </button>
 
             <div className={styles.brandBlock}>
-              <h1 id="welcome-modal-title" className={styles.brandName}>
-                Ecolimpieza Bogotá <span className={styles.brandLegal}>S.A.S.</span>
-              </h1>
+              <h1 id="welcome-modal-title" className={styles.srOnly}>Ecolimpieza Bogotá S.A.S.</h1>
+              <LogoEcolimpieza variant="modal" className={styles.brandLogo} />
+              <p className={styles.brandLegal}>Ecolimpieza Bogotá S.A.S.</p>
               <p className={styles.brandIntro}>
                 Empresa de limpieza hidrosanitaria e industrial. Equipos de succión (vactor), hidrojet de alta presión, inspección CCTV de tuberías, mantenimiento de redes y alcantarillado. Cobertura nacional.
               </p>

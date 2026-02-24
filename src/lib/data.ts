@@ -16,7 +16,7 @@ export const projects: ProjectImage[] = [
         title: 'Limpieza de Alcantarillado Municipal',
         category: 'vactor',
         description: 'Succión mecánica de lodos y limpieza de tuberías de gran diámetro con equipo Vactor.',
-        image: '/images/vactor-truck.jpg',
+        image: '/images/operacion-limpieza-alcantarillado-calle.png',
         client: 'Alcaldía Local',
         location: 'Bogotá, Suba'
     },
@@ -25,7 +25,7 @@ export const projects: ProjectImage[] = [
         title: 'Desobstrucción de Redes Industriales',
         category: 'hidrojet',
         description: 'Uso de hidrojet a alta presión para remover incrustaciones de grasa en planta de alimentos.',
-        image: '/images/vactor-blue.jpg',
+        image: '/images/camion-vaccon-hidrojet-urbano.png',
         client: 'Planta Alquería',
         location: 'Cajicá'
     },
@@ -34,7 +34,7 @@ export const projects: ProjectImage[] = [
         title: 'Inspección Robótica de Tubería',
         category: 'cctv',
         description: 'Diagnóstico por cámara CCTV para identificar fisuras en red contra incendios.',
-        image: '/images/vactor-street.jpg',
+        image: '/images/tecnico-limpieza-alcantarillado-manhole.png',
         client: 'Centro Comercial Andino',
         location: 'Bogotá, Chapinero'
     },
@@ -43,7 +43,7 @@ export const projects: ProjectImage[] = [
         title: 'Mantenimiento de Trampas de Grasa',
         category: 'mantenimiento',
         description: 'Limpieza integral y disposición certificada de residuos orgánicos.',
-        image: '/images/vactor-urban.jpg',
+        image: '/images/operador-bombeo-pozos-septicos.png',
         client: 'Cadena de Restaurantes',
         location: 'Bogotá, Zona G'
     },
@@ -52,7 +52,7 @@ export const projects: ProjectImage[] = [
         title: 'Limpieza de Pozos Sépticos',
         category: 'vactor',
         description: 'Succión y transporte de lodos residuales en zona rural.',
-        image: '/images/vactor-operation.jpg',
+        image: '/images/camion-vactor-mantenimiento-drenajes.png',
         client: 'Condominio Campestre',
         location: 'Villeta'
     },
@@ -61,7 +61,7 @@ export const projects: ProjectImage[] = [
         title: 'Corrección de Pendientes en Drenajes',
         category: 'mantenimiento',
         description: 'Ajuste de niveles y limpieza profunda de canales de recolección pluvial.',
-        image: '/images/vactor-team.jpg',
+        image: '/images/equipo-limpieza-vaccon-operacion.png',
         client: 'Parque Industrial',
         location: 'Funza'
     }

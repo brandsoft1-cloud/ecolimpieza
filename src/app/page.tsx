@@ -52,14 +52,14 @@ export default function Home() {
   const heroY = useTransform(scrollYProgress, [0, 0.2], [0, 150]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
-  // Equipment images for gallery
+  // Equipment images (usado en futuras secciones; todas locales con nombres SEO)
   const equipmentImages = [
-    { src: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop", title: "Vactor Principal", desc: "Equipo de succión 11m³" },
-    { src: "https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop", title: "Hidrojet Azul", desc: "Alta presión 3,600 PSI" },
-    { src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop", title: "Operación Urbana", desc: "Servicio en calle" },
-    { src: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2070&auto=format&fit=crop", title: "Limpieza Industrial", desc: "Redes maestras" },
-    { src: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2070&auto=format&fit=crop", title: "En Operación", desc: "Brazo extendido" },
-    { src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop", title: "Equipo Técnico", desc: "Personal certificado" }
+    { src: "/images/camion-vaccon-eco-limpieza-bogota.png", title: "Vactor Principal", desc: "Equipo de succión Vac-Con" },
+    { src: "/images/camion-vaccon-hidrojet-urbano.png", title: "Hidrojet", desc: "Alta presión" },
+    { src: "/images/operacion-limpieza-alcantarillado-calle.png", title: "Operación Urbana", desc: "Servicio en calle" },
+    { src: "/images/camion-vactor-nocturno-iluminado.png", title: "En Operación", desc: "Servicio 24/7" },
+    { src: "/images/equipo-limpieza-vaccon-operacion.png", title: "Equipo en Campo", desc: "Personal certificado" },
+    { src: "/images/camion-vactor-zona-urbana-bogota.png", title: "Cobertura Bogotá", desc: "Zona urbana" }
   ];
 
   return (

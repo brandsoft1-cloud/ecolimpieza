@@ -5,6 +5,8 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppFloating from "@/components/ui/WhatsAppFloating";
 import WelcomeModal from "@/components/ui/WelcomeModal";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import LoadingTestWrapper from "@/components/ui/LoadingTestWrapper";
+import LoadingScreen from "@/components/LoadingScreen";
 import "./globals.css";
 
 const outfit = Outfit({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
@@ -45,14 +47,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body className={outfit.className}>
-        <Navbar />
-        <Breadcrumbs />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppFloating />
-        <WelcomeModal />
+    <html lang="es" suppressHydrationWarning>
+      <body className={outfit.className} suppressHydrationWarning>
+        <LoadingScreen>
+          <LoadingTestWrapper>
+            <Navbar />
+            <Breadcrumbs />
+            <main>{children}</main>
+            <Footer />
+            <WhatsAppFloating />
+            <WelcomeModal />
+          </LoadingTestWrapper>
+        </LoadingScreen>
 
         {/* LocalBusiness Structured Data */}
         <script

@@ -10,21 +10,21 @@ import styles from "./HeroCarousel.module.css";
 const slides = [
   {
     id: 1,
-    src: "/carousel/slide1.png",
-    title: "INGENIERÍA ELITE DE \n EQUIPOS VACTOR",
-    subtitle: "Líderes en gestión hidrosanitaria industrial. Tecnología alemana y certificación ambiental para operaciones críticas."
+    src: "/carousel/hero-1.webp",
+    title: "SERVICIO 24/7 \n TAMBIÉN DE NOCHE",
+    subtitle: "Operamos día y noche. Equipos Vactor iluminados y listos para emergencias hidrosanitarias en Bogotá y Colombia."
   },
   {
     id: 2,
-    src: "/carousel/slide2.png",
-    title: "TECNOLOGÍA DE PUNTA \n PARA LA INDUSTRIA",
-    subtitle: "Equipos de succión y presión con máxima capacidad para resolver las necesidades más exigentes."
+    src: "/carousel/hero-2.webp",
+    title: "INGENIERÍA ELITE DE \n EQUIPOS VACTOR",
+    subtitle: "Más de 15 años y más de 5000 servicios. Empresa grande de trayectoria en gestión hidrosanitaria industrial, tecnología de punta y certificación ambiental."
   },
   {
     id: 3,
-    src: "/carousel/slide3.png",
+    src: "/carousel/hero-3.webp",
     title: "COBERTURA TOTAL \n Y EFICIENCIA",
-    subtitle: "Flota propia especializada para brindar soluciones rápidas, seguras y confiables a nivel nacional."
+    subtitle: "Flota propia especializada. Soluciones rápidas, seguras y confiables en vías, industrias y redes a nivel nacional."
   }
 ];
 
@@ -73,10 +73,11 @@ export default function HeroCarousel() {
             src={slides[current].src}
             alt={slides[current].title}
             fill
-            priority
-            sizes="100vw"
-            quality={90}
+            priority={current === 0}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1920px"
+            quality={82}
             className={styles.bgImage}
+            loading={current === 0 ? "eager" : "lazy"}
           />
           <div className={styles.overlay} />
         </motion.div>

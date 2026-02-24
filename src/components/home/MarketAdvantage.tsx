@@ -8,8 +8,8 @@ import styles from "./MarketAdvantage.module.css";
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573183084334";
 
 const metrics = [
-  { value: 10, suffix: " años", label: "Experiencia", icon: Calendar, max: 15 },
-  { value: 500, suffix: "+", label: "Clientes", icon: Users, max: 600 },
+  { value: 15, suffix: "+ años", label: "Trayectoria", icon: Calendar, max: 20 },
+  { value: 5000, suffix: "+", label: "Servicios realizados", icon: Users, max: 6000 },
   { value: 150, suffix: " km", label: "Tuberías limpias", icon: Ruler, max: 200 },
   { value: 25, suffix: "k ton", label: "A planta tratamiento", icon: Scale, max: 30 },
 ];
@@ -44,8 +44,7 @@ export default function MarketAdvantage() {
           <span className={styles.badge}>Ventaja competitiva</span>
           <h2 className={styles.title}>Por qué somos líderes del mercado</h2>
           <p className={styles.subtitle}>
-            Datos y métricas que respaldan nuestro liderazgo en servicios de limpieza hidrosanitaria,
-            vactor, hidrojet y CCTV a nivel nacional.
+            Más de 15 años de trayectoria y más de 5000 servicios ejecutados. Empresa grande con datos que respaldan nuestro liderazgo en limpieza hidrosanitaria, vactor, hidrojet y CCTV a nivel nacional.
           </p>
         </motion.header>
 

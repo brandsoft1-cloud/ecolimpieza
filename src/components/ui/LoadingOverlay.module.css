@@ -1,143 +1,126 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: linear-gradient(180deg, #0f1a0f 0%, #1a2e1a 50%, #0f1a0f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  color: var(--dark);
+  color: var(--white);
 }
 
-.content {
+.scene {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  padding: 2rem;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 2rem 1.5rem 2.5rem;
+  box-sizing: border-box;
 }
 
-.vactorSvg {
-  width: min(280px, 70vw);
-  height: auto;
-  color: var(--primary);
-  filter: drop-shadow(0 4px 20px rgba(119, 184, 85, 0.2));
+.imageWrap {
+  position: relative;
+  width: min(420px, 92vw);
+  aspect-ratio: 16 / 10;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+  animation: imageReveal 1.2s ease-out;
 }
 
-/* Wheel rotation */
-.wheel {
-  transform-origin: center;
-  animation: spin 1.2s linear infinite;
-}
-
-@keyframes spin {
+@keyframes imageReveal {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: scale(0.96);
   }
   to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Hose pulse */
-.hose {
-  stroke-dasharray: 20 10;
-  animation: hoseFlow 0.8s linear infinite;
-}
-
-@keyframes hoseFlow {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: 30;
-  }
-}
-
-/* Worker subtle bounce */
-.worker,
-.worker2 {
-  transform-box: fill-box;
-  transform-origin: center bottom;
-}
-
-.worker {
-  animation: workerBounce 1.5s ease-in-out infinite;
-}
-
-.worker2 {
-  animation: workerBounce 1.5s ease-in-out infinite 0.3s;
-}
-
-@keyframes workerBounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-}
-
-/* Tank subtle scale */
-.tank {
-  transform-box: fill-box;
-  transform-origin: center center;
-  animation: tankPulse 2s ease-in-out infinite;
-}
-
-@keyframes tankPulse {
-  0%,
-  100% {
+    opacity: 1;
     transform: scale(1);
   }
-  50% {
-    transform: scale(1.02);
-  }
 }
 
-/* Truck cab slight movement */
-.truckCab {
-  transform-box: fill-box;
-  transform-origin: center center;
-  animation: truckIdle 2.5s ease-in-out infinite;
+.heroImage {
+  object-fit: cover;
 }
 
-@keyframes truckIdle {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(2px);
-  }
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.5) 60%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  pointer-events: none;
 }
 
-.label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--primary);
-  letter-spacing: 0.05em;
+.badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logoBlock {
+  margin-top: 2rem;
+  animation: logoReveal 0.8s ease-out 0.3s both;
+}
+
+.logoBlock :global([class*="mainText"]),
+.logoBlock :global([class*="subText"]) {
+  color: var(--white);
+}
+
+.logoBlock :global([class*="iconBox"]) {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+@keyframes logoReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subline {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.08em;
+  animation: logoReveal 0.8s ease-out 0.5s both;
 }
 
 .barWrap {
-  width: 120px;
-  height: 4px;
-  background: rgba(119, 184, 85, 0.2);
-  border-radius: 4px;
+  width: 160px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
   overflow: hidden;
+  margin-top: 1.5rem;
+  animation: logoReveal 0.8s ease-out 0.6s both;
 }
 
 .bar {
   height: 100%;
-  width: 40%;
+  width: 32%;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
-  border-radius: 4px;
-  animation: barSlide 1.2s ease-in-out infinite;
+  border-radius: 3px;
+  animation: barSlide 1.4s ease-in-out infinite;
 }
 
 @keyframes barSlide {
@@ -145,6 +128,20 @@
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(350%);
+    transform: translateX(420%);
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrap {
+    aspect-ratio: 4 / 3;
+  }
+  .logoBlock {
+    margin-top: 1.5rem;
+  }
+  .subline {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 0 0.5rem;
   }
 }

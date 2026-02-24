@@ -18,23 +18,9 @@
 }
 
 .brand .logo {
-    display: flex;
-    flex-direction: column;
     margin-bottom: 1.5rem;
 }
 
-.logoText {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--secondary);
-}
-
-.logoSubtext {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #888;
-    letter-spacing: 2px;
-}
 
 .description {
     color: #aaa;
@@ -51,6 +37,7 @@
     width: 40px;
     height: 40px;
     background: #333;
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;

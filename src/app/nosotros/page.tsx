@@ -66,8 +66,8 @@ export default function NosotrosPage() {
             <section className={styles.hero}>
                 <div className={styles.heroOverlay} />
                 <Image
-                    src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop"
-                    alt="Ecolimpieza Bogota fleet"
+                    src="/images/camion-vaccon-eco-limpieza-bogota.png"
+                    alt="Flota Ecolimpieza Bogotá - Camión Vactor Vac-Con"
                     fill
                     priority
                     className={styles.heroImg}
@@ -131,8 +131,8 @@ export default function NosotrosPage() {
                             variants={fadeInRight}
                         >
                             <Image
-                                src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop"
-                                alt="Equipo Vactor Ecolimpieza Bogotá"
+                                src="/images/camion-vactor-vaccon-bogota.png"
+                                alt="Equipo Vactor Vac-Con - Ecolimpieza Bogotá"
                                 width={600}
                                 height={400}
                                 className={styles.imgVactor}

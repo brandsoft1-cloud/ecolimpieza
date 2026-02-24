@@ -3,10 +3,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Droplets, ShieldCheck } from "lucide-react";
+import { Menu, X, ShieldCheck } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Navbar.module.css";
 import BookingModal from "../ui/BookingModal";
+import LogoEcolimpieza from "../ui/LogoEcolimpieza";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,13 +34,7 @@ export default function Navbar() {
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
         <div className={`container ${styles.container}`}>
           <Link href="/" className={styles.logo}>
-            <div className={styles.iconBox}>
-              <Droplets className={styles.drop} />
-            </div>
-            <div className={styles.logoText}>
-              <span className={styles.mainLogo}>ECOLIMPIEZA</span>
-              <span className={styles.subLogo}>BOGOTÁ S.A.S</span>
-            </div>
+            <LogoEcolimpieza variant="full" showSAS className={styles.logoBrand} />
           </Link>
 
           {/* Desktop Links */}
