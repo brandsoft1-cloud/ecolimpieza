@@ -4,17 +4,24 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import VactorAnimation from "./home/VactorAnimation";
 
-export default function LoadingScreen({ children }: { children: React.ReactNode }) {
+export default function LoadingScreen({
+    children,
+    durationMs = 2500,
+}: {
+    children: React.ReactNode;
+    /** Duración máxima del loader al cargar (ms). */
+    durationMs?: number;
+}) {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Mostrar la animación de arranque como prueba durante 30 segundos
+        // Loader de arranque (solo cuando se active con NEXT_PUBLIC_BOOT_LOADER=true)
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 30000);
+        }, durationMs);
 
         return () => clearTimeout(timer);
-    }, []);
+    }, [durationMs]);
 
     return (
         <>

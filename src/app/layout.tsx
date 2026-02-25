@@ -46,19 +46,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Por defecto NO mostramos loader de arranque (evita quedarse pegado).
+  // Para activarlo solo cuando se necesite: setear NEXT_PUBLIC_BOOT_LOADER="true"
+  const ENABLE_BOOT_LOADER = process.env.NEXT_PUBLIC_BOOT_LOADER === "true";
+
+  const AppShell = (
+    <LoadingTestWrapper>
+      <Navbar />
+      <Breadcrumbs />
+      <main>{children}</main>
+      <Footer />
+      <WhatsAppFloating />
+      <WelcomeModal />
+    </LoadingTestWrapper>
+  );
+
   return (
     <html lang="es" suppressHydrationWarning>
       <body className={outfit.className} suppressHydrationWarning>
-        <LoadingScreen>
-          <LoadingTestWrapper>
-            <Navbar />
-            <Breadcrumbs />
-            <main>{children}</main>
-            <Footer />
-            <WhatsAppFloating />
-            <WelcomeModal />
-          </LoadingTestWrapper>
-        </LoadingScreen>
+        {ENABLE_BOOT_LOADER ? <LoadingScreen>{AppShell}</LoadingScreen> : AppShell}
 
         {/* LocalBusiness Structured Data */}
         <script
